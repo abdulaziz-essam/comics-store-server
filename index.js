@@ -6,7 +6,7 @@ import bodyParser from "body-parser"
 import deleteMethod from '../server/src/route/deleteRoute.js'
 const app = express()
 
-const port = 3904
+const port = 3906
 app.use('/update',update)
 app.use('/show',show)
 app.use("/add" ,insert )
