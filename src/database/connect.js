@@ -1,7 +1,14 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-dotenv.config()
-const databaseUrl = process.env.MONGO_URI
-mongoose.connect('mongodb+srv://aek123:1234@cluster0.ptuiq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+console.log(__dirname)
+console.log(__filename)
+dotenv.config(({ path: path.resolve(__dirname, '../.env') }))
+const databaseUrl = process.env.USER_KEY
+mongoose.connect(databaseUrl)
 const conn = mongoose.connection
 export default conn

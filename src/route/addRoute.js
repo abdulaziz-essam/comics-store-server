@@ -7,11 +7,11 @@ router.use(bodyParser.json());
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 export default router.post('/',urlencodedParser, (req, res) => {
     const name = req.body.name
-    const email = req.body.company
+    const release_date = req.body.release
     const quantity = req.body.quantity
-    const number=req.body.number
+    const number=req.body.company
 
-    add(name, email, quantity, number)
+    add(name, release_date, quantity, number)
 
     res.send("good job")
 })

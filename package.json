@@ -12,6 +12,7 @@
     "cors": "^2.8.5",
     "dotenv": "^11.0.0",
     "express": "^4.17.2",
+    "https-agent": "^1.0.0",
     "mongodb": "^4.3.0",
     "mongoose": "^6.1.6"
   },

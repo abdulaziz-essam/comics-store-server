@@ -4,9 +4,10 @@ import show from '../server/src/route/showRoute.js'
 import insert from "../server/src/route/addRoute.js"
 import bodyParser from "body-parser"
 import deleteMethod from '../server/src/route/deleteRoute.js'
+import cors from 'cors'
 const app = express()
-
-const port = 3906
+app.use(cors())
+const port = 4049
 app.use('/update',update)
 app.use('/show',show)
 app.use("/add" ,insert )

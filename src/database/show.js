@@ -1,20 +1,37 @@
 import db from '../database/connect.js';
 
 
-const show = (chatbotname) => {
+const show =  async  (comicName) => {
+   try {
+       let data = await db.collection("comicsStore").findOne({
+           "company": "dc"
+        })
+        
+       return data;  
+   } catch (error) {
+       console.log(error)
+   }
  
-
-    try {
-        const data = db.collection("chatbot").findOne({  chatbotname:chatbotname }, function (err, obj) { console.log(obj); });
- 
-        db.save
-        console.log(data)
-
-    } catch (error) {
-        console.log(error);
-    }
-
-    console.log("good job ")
-
 }
-export default show
+
+
+//find all
+// const showAll = async (comicName) => {
+
+
+
+
+    
+// try {
+//     let data = await db.collection().findOne({ "company": "dc" })
+//   data.then((data) => {
+//       console.log(data)
+//   })
+//   return data
+// } catch (error) {
+//     console.log(error);
+// }
+ 
+
+// }
+export {show}
