@@ -7,7 +7,7 @@ import deleteMethod from '../server/src/route/deleteRoute.js'
 import cors from 'cors'
 const app = express()
 app.use(cors())
-const port = 4049
+const port = 4053
 app.use('/update',update)
 app.use('/show',show)
 app.use("/add" ,insert )
